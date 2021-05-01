@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/index.css">
+    <title>Répertoire de contact</title>
+</head>
+<body>
+    <div>
+        <h2 id="main_title">Répertoire de contact</h2>
+        <div id="form_list_container">
+            <div id="form_contact">
+                <h3 class="sub_title">Formulaire de contact</h3>
+                <form>
+                    <p class="form_label"><label for="prenom">Prénom</label></p>
+                    <p><input type="text" id="prenom" class="main_inputs"></p>
+                    <p class="form_label"><label for="name">Name</label></p>
+                    <p><input type="text" id="nom" class="main_inputs"></p>
+                    <p class="form_label"><label for="groupe">Groupe</label></p>
+                    <p><select id="groupe" class="main_inputs">
+                        <option value="CEO & CTO">CEO & CTO</option>
+                        <option value="Community manager">Community manager</option>
+                        <option value="Marketing head">Marketing head</option>
+                    </select></p>
+                    <p class="form_label"><label for="bio">Bio</label></p>
+                    <p><textarea id="bio" cols="30" rows="10" id="bio"></textarea></p>
+                    <div id="form_foot">
+                        <label for="contact_picture" id="img_load">Choisir un fichier</label>
+                        <input type="file" id="contact_picture">
+                        <img src="img/8.jpg" alt="profile_img" id="img_preview">
+                    </div>
+                    <div id="end_btn_container">
+                        <input type="submit" value="Créer" id="sendData">
+                        <input type="reset" value="Réinit">
+                    </div>
+                </form>
+            </div>
+            <div id="list_container">
+                <h3 class="sub_title">Liste de contact</h3>
+                <div id="items_container">
+                    <!-- <div id="list_item">
+                        <div id="picture_block">
+                            <img src="img/8.jpg" alt="contact_profile">
+                        </div>
+                        <div id="contact_cred">
+                            <p>Prénom: <span>???</span></p>
+                            <p>Groupe: <span>???</span></p>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                                Hic et, asperiores doloribus a molestiae porro enim 
+                                quas, mollitia repellendus facilis ad error beatae 
+                                laboriosam perspiciatis necessitatibus! 
+                                Cum nisi laboriosam sapiente!</p>
+                        </div>
+                        <p id="removeItem">X</p>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>
