@@ -20,7 +20,7 @@ let fromLoadIdentifier = 0;
 //program helpers
 
 //controls dom updates utilitary
-var fromLoadSwitch = () => {
+var resetFromLoad = () => {
     fromLoadIdentifier = 0;
 }
 
@@ -73,7 +73,7 @@ var globalState = {
     updateDOM: () => {
         console.log(globalState.state.length);
         //Anounce the new up-to-date data to come
-        fromLoadSwitch();
+        resetFromLoad();
         for (let i = 0; i < globalState.state.length; i++) {
             fillTheDOM(globalState.state[i]);
         }
@@ -100,7 +100,6 @@ var fillTheDOM = contactObjectItem => {
         container.innerHTML = '';
         fromLoadIdentifier = 1;
     }
-    console.log(fromLoadIdentifier);
     //remove all the old data in the container
     var list_item = document.createElement('div');
     list_item.setAttribute('id', 'list_item');
@@ -148,25 +147,18 @@ var fillTheDOM = contactObjectItem => {
     pClose.addEventListener('click', function (event) {
         //Getting the contact DOM object
         var item = event.currentTarget.parentNode;
-        console.log(pClose);
-        console.log(item);
-
-        //retrieve the value of the attribute in which we stocked the id
-        let contactID = pClose.getAttribute('name');
-        console.log(contactID);
+        console.log(item.children.length);
 
         //call to the remove method of the state manager object
         globalState.updateStatebyRemove(contactObjectItem.id);
 
         //little animation to avoid the user get frustracted while operations are being excuted
-        item.style.transition = "1s all";
-        item.style.backgroundColor = "rgba(0, 0, 155, 0.5)";
-        item.style.transform = "translate(0, 100%)";
+        item.classList.add();
 
         //Wait the transition end
-        window.setTimeout(() => {
-            item.removeChild(pClose);
-        }, 1000);
+        // window.setTimeout(() => {
+        //     container.removeChild(item);
+        // }, 1000);
     });
     container.appendChild(list_item);
 

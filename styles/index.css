@@ -5,49 +5,69 @@
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
+.container {
+    background-color: #01173391;
+    border: 3px solid #011733;
+}
+
+@font-face {
+    font-family: 'mont-black';
+    src: url('../fonts/Montserrat-Black.ttf');
+}
+
 #main_title {
-    color: #fff;
+    color: #011733;
     padding-right: 15px;
     font-size: 32px;
+    border-bottom: 5px solid #011733;
     font-weight: bold;
-    background-color: #2f80ed;
+    font-family: 'mont-black';
+    background-color: #01173369;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 20px;
 }
 .sub_title {
-    color: #fff;
+    color: maroon;
     padding-right: 15px;
     font-size: 24px;
-    font-weight: bold;
-    background-color: #2f80ed;
+    font-weight: 900;
+    border-bottom: 5px solid #011733;
+    background-color: #011733;
     padding-top: 10px;
     padding-bottom: 10px;
     text-align: center;
 }
-#items_container {
+.form {
     overflow-y: scroll;
+}
+#items_container {
+    overflow: hidden;
 }
 #form_list_container {
     margin: 8px;
     display: flex;
+    justify-content: center;
 }
 #form_contact {
-    border: 1px solid #2f80ed;
-    width: 50%;
-    margin-right: 5px;
+    border: 5px solid #011733;
+    border-radius: 25px;
+    overflow: hidden;
+    width: 48%;
+    margin-right: 25px;
     background-color: #2f81ed2a;
+    height: 90vh;
 }
 #contact_picture {
     display: none;
 }
 #list_contact {
-    border: 1px solid #2f80ed;
+    border: 1px solid maroon;
     width: 50%;
     border-radius: 5px;
 }
 .main_inputs {
-    border: 1px solid grey;
+    border: 3px solid #011733;
     height: 30px;
     border-radius: 3px;
     width: 100%;
@@ -58,23 +78,25 @@
     background-color: rgba(0, 0, 0, 0.075);
 }
 .form_label {
-    color: #2f80ed;
+    color: #011733;
+    font-weight: bold;
 }
 #bio {
     height: 100px;
-    border: 1 solid grey;
+    border: 1 solid maroon;
     border-radius: 3px;
     width: 100%;
+    border: 3px solid #011733;
 }
 #form_contact label {
-    color: #2f80ed;
+    color: #011733;
     font-size: 16px;
 }
 #form_contact form {
     padding: 30px;
 }
 #form_contact form p {
-    margin-top: 15px;
+    margin-top: 5px;
     word-wrap: break-word;
 }
 #form_foot {
@@ -87,7 +109,7 @@
 }
 #form_foot img {
     width: 100px;
-    height: 140px;
+    height: 80px;
 }
 #end_btn_container {
     padding: 10px;
@@ -96,25 +118,36 @@
     margin-bottom: 20px;
 }
 #end_btn_container input[type='submit'] {
-    color: #fff;
-    border: none;
+    color: maroon;
+    border: 2px solid maroon;;
     border-radius: 3px;
     font-size: 18px;
     padding: 3px 45px;
-    background-color: #2f80ed;
+    background-color: #011733;
 }
 #end_btn_container input[type='reset'] {
-    color: #fff;
-    border: none;
+    color: #011733;
+    border: 2px solid #011733;
     border-radius: 3px;
     font-size: 18px;
     padding: 3px 45px;
-    background-color: red;
+    background-color: maroon;
+}
+.contacts {
+    height: 100%;
+    overflow-y: scroll;
+}
+.remove-anim {
+    transition: "1s all";
+    transform: "scale(0)";
 }
 #list_container {
-    border: 1px solid #2f80ed;
-    width: 50%;
+    border: 5px solid #011733;
+    width: 48%;
     background-color: #2f81ed2a;
+    border-radius: 25px;
+    height: 90vh;
+    overflow: hidden;
 }
 #cred {
     display: flex;
@@ -123,7 +156,7 @@
     padding: 5px;
     display: flex;
     justify-content: space-between;
-    border: 2px solid #797373;
+    border: 2px solid #011733;
     background-color: rgb(246, 248, 252);
     margin-top: 2px;
 }
@@ -140,10 +173,10 @@
 #contact_cred p {
     margin-bottom: 5px;
     font-weight: bold;
-    color: #646363;
+    color: #011733;
 }
 #list_item > p{
-    color: red;
+    color: maroon;
     font-weight: bold;
 }
 #removeItem {
