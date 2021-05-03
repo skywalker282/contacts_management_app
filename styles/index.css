@@ -183,4 +183,9 @@
     cursor: pointer;
     font-size: 24px;
     height: 5px;
+    text-align: right;
+}
+
+#removeItem img {
+    width: 15%;
 }

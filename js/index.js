@@ -1,4 +1,8 @@
 
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('../sw.js');
+}
+
 //Gloabal events handling
 window.addEventListener('load', () => {
     localStorageHelper.populateState();
@@ -22,14 +26,14 @@ let fromLoadIdentifier = 0;
 //controls dom updates utilitary
 var resetFromLoad = () => {
     fromLoadIdentifier = 0;
-}
+};
 
 //Event handling
 addItemTrigger.addEventListener('click', (event) => {
     event.preventDefault();
     //Retrive data from the DOM
     DOMDataRetriever();
-})
+});
 
 //database initialization
 var localStorage = window.localStorage;
@@ -39,7 +43,7 @@ var localStorageHelper = {
     state: [],
     populateState: () => {
         //Clear all the data in the current state
-        localStorageHelper.state = []
+        localStorageHelper.state = [];
         for (let i = 0; i < localStorage.length; i++) {
             let contactItem = localStorage.getItem(localStorage.key(i));
             contactItem = JSON.parse(contactItem);
@@ -72,11 +76,14 @@ var globalState = {
     state: [],
     updateDOM: () => {
         console.log(globalState.state.length);
-        //Anounce the new up-to-date data to come
+        //Anounce the new up-to-date data to come 
         resetFromLoad();
+        if (globalState.state.length === 0) {
+            resetTheDOM();
+        }
         for (let i = 0; i < globalState.state.length; i++) {
             fillTheDOM(globalState.state[i]);
-        }
+        };
     },
     updateStatebyAdd: itemContact => {
         state = globalState.state;
@@ -94,6 +101,11 @@ var globalState = {
 }
 
 //DOM connectivity helpers
+
+var resetTheDOM = () => {
+    container.innerHTML = '';
+}
+
 var fillTheDOM = contactObjectItem => {
     if (fromLoadIdentifier === 0) {
         //if we are about the first page load;
@@ -117,9 +129,9 @@ var fillTheDOM = contactObjectItem => {
     pGroupe.setAttribute('id', 'contact_group');
     var pBio = document.createElement('p');
     pBio.setAttribute('id', 'contact_bio');
-    var pClose = document.createElement('p');
+    var pClose = document.createElement('div');
     pClose.setAttribute('id', 'removeItem');
-    pClose.innerHTML = 'X';
+    pClose.innerHTML = '<img src="img/user-slash-solid.svg" />';
 
     //Inserting elements each other
     list_item.appendChild(cred);
@@ -152,7 +164,7 @@ var fillTheDOM = contactObjectItem => {
         //call to the remove method of the state manager object
         globalState.updateStatebyRemove(contactObjectItem.id);
 
-        //little animation to avoid the user get frustracted while operations are being excuted
+        //little animation to avoid the user get not frustracted while operations are being excuted
         item.classList.add();
 
         //Wait the transition end
