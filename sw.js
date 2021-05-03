@@ -40,7 +40,7 @@ var refresh = response => {
 
 //constant value used in the program
 const CACHE_NAME = "V1";
-const STATIC_CACHE_URLS = ["/", "css/", "js/", "img/"];
+const STATIC_CACHE_URLS = ["/", "styles/", "js/", "img/", "fonts/"];
 
 //handle the install event on the service worker
 self.addEventListener("install", event => {
