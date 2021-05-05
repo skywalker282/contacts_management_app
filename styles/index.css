@@ -1,18 +1,25 @@
-* {
-    margin: 0;
-    padding: O;
-    box-sizing: border-box;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
 
-.container {
-    background-color: #01173391;
-    border: 3px solid #011733;
+
+@font-face {
+    font-family: 'roboto';
+    src: url('../fonts/Roboto-Light.ttf');
 }
 
 @font-face {
     font-family: 'mont-black';
     src: url('../fonts/Montserrat-Black.ttf');
+}
+
+* {
+    margin: 0;
+    padding: O;
+    box-sizing: border-box;
+    font-family: 'roboto';
+}
+
+.container {
+    background-color: #01173391;
+    border: 3px solid #011733;
 }
 
 #main_title {
@@ -28,10 +35,9 @@
     padding-left: 20px;
 }
 .sub_title {
-    color: maroon;
+    color: #fff;
     padding-right: 15px;
     font-size: 24px;
-    font-weight: 900;
     border-bottom: 5px solid #011733;
     background-color: #011733;
     padding-top: 10px;
@@ -39,7 +45,7 @@
     text-align: center;
 }
 .form {
-    overflow-y: scroll;
+    
 }
 #items_container {
     overflow: hidden;
@@ -73,9 +79,19 @@
     width: 100%;
 }
 #img_load {
-    color: black;
+    color: #fff!important;
+    height: min-content;
+    font-weight: bold;
+    border: 2px solid #011733;
+    border-radius: 5px;
+    background-color: #011733!important;
+    cursor: pointer;
     padding: 5px;
     background-color: rgba(0, 0, 0, 0.075);
+}
+#img_load:hover {
+    background-color: #fff!important;
+    color: #011733!important;
 }
 .form_label {
     color: #011733;
@@ -111,6 +127,7 @@
     width: 100px;
     height: 80px;
 }
+
 #end_btn_container {
     padding: 10px;
     display: flex;
@@ -118,21 +135,39 @@
     margin-bottom: 20px;
 }
 #end_btn_container input[type='submit'] {
-    color: maroon;
-    border: 2px solid maroon;;
-    border-radius: 3px;
-    font-size: 18px;
-    padding: 3px 45px;
-    background-color: #011733;
-}
-#end_btn_container input[type='reset'] {
     color: #011733;
     border: 2px solid #011733;
     border-radius: 3px;
     font-size: 18px;
-    padding: 3px 45px;
-    background-color: maroon;
+    font-weight: 900;
+    padding: 7px 45px;
+    cursor: pointer;
+    background-color: #fff;
 }
+
+#end_btn_container input[type='submit']:hover {
+    transition: 1s color;
+    background: #011733;
+    color: #fff;
+}
+
+#end_btn_container input[type='reset'] {
+    color: maroon;
+    border: 2px solid maroon;
+    cursor: pointer;
+    border-radius: 3px;
+    font-weight: 900;
+    font-size: 18px;
+    padding: 3px 45px;
+    background-color: #fff;
+}
+
+#end_btn_container input[type='reset']:hover {
+    transition: 1s color;
+    background-color: maroon;
+    color: #fff;
+}
+
 .contacts {
     height: 100%;
     overflow-y: scroll;
