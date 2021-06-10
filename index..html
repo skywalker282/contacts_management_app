@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/fontawesome.min.css">
+    <title>GESTION DES CONTACTS</title>
+    <style>
+        @font-face {
+            font-family: 'roboto';
+            src: url('./fonts/Roboto-Light.ttf');
+        }
+        @font-face {
+            font-family: 'mont-black';
+            src: url('./fonts/Montserrat-Black.ttf');
+        }
+        * {
+            font-family: 'roboto';
+        }
+        .splash {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .splash h1 {
+            color: #011733;
+            text-align: center;
+        }
+        .splash img {
+            margin: 0;
+        }
+        .splash h3 {
+            font-size: 28px;
+            font-family: 'mont-black';
+            margin-bottom: 0;
+        }
+        #redirect {
+            display: none;
+        }
+    </style>
+</head>
+<body id="app" id="splash">
+    <div class="splash">
+        <a href="app.html" id="redirect">redirect</a>
+        <h1>The pretty tool for the management of your contacts. Try it now!</h1>
+        <img src="img/spinner.gif" alt="spinner">
+        <h3>YourContactSave</h3>
+        <h6>v 0.1.0</h6>
+    </div>
+    <script>
+        const redirect = document.getElementById('redirect');
+
+            window.setTimeout(()=> {
+                redirect.click();
+            }, 2000);
+    </script>
+</body>
+</html>
