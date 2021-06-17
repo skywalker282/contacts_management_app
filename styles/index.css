@@ -16,18 +16,16 @@
 }
 
 .container {
-  background-color: #01173391;
-  border: 3px solid #011733;
 }
 
 #main_title {
   color: #011733;
   padding-right: 15px;
   font-size: 32px;
-  border-bottom: 5px solid #011733;
+  box-shadow: 0px 0px 5px #011733;
   font-weight: bold;
   font-family: "mont-black";
-  background-color: #01173369;
+  background-color: #01173309;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 20px;
@@ -49,14 +47,15 @@
   margin: 8px;
   display: flex;
   justify-content: center;
+  background-color: #fff;
 }
 #form_contact {
-  border: 5px solid #011733;
-  border-radius: 25px;
+  box-shadow: 0px 0px 5px #011733;
+  border-radius: 5px;
   overflow: hidden;
   width: 48%;
   margin-right: 25px;
-  background-color: #2f81ed2a;
+  background-color: #01173309;
   height: 88.5vh;
 }
 #contact_picture {
@@ -67,18 +66,24 @@
   width: 50%;
   border-radius: 5px;
 }
+
+.main_inputs:focus {
+  outline: none;
+}
+
 .main_inputs {
-  border: 3px solid #011733;
+  border: none;
+  border-bottom: 1px solid #011733;
   height: 30px;
-  border-radius: 3px;
   width: 100%;
+  background-color: inherit;
 }
 #img_load {
   color: #fff !important;
   height: min-content;
   font-weight: bold;
-  border: 2px solid #011733;
-  border-radius: 5px;
+  border: 1px solid #011733;
+  border-radius: 2px;
   background-color: #011733 !important;
   cursor: pointer;
   padding: 5px;
@@ -97,7 +102,7 @@
   border: 1 solid maroon;
   border-radius: 3px;
   width: 100%;
-  border: 3px solid #011733;
+  border: 1px solid #011733;
 }
 #form_contact label {
   color: #011733;
@@ -131,7 +136,7 @@
 }
 #end_btn_container input[type="submit"] {
   color: #011733;
-  border: 2px solid #011733;
+  border: 1px solid #011733;
   border-radius: 3px;
   font-size: 18px;
   font-weight: 900;
@@ -148,13 +153,20 @@
 
 #end_btn_container input[type="reset"] {
   color: maroon;
-  border: 2px solid maroon;
+  border: 1px solid maroon;
   cursor: pointer;
-  border-radius: 3px;
+  border-radius: 1px;
   font-weight: 900;
   font-size: 18px;
   padding: 3px 45px;
   background-color: #fff;
+}
+
+option {
+  font-size: 14px;
+  color: #fff;
+  background-color: #011733;
+  padding: 5px 0;
 }
 
 #end_btn_container input[type="reset"]:hover {
@@ -173,10 +185,10 @@
   transform: "scale(0)";
 }
 #list_container {
-  border: 5px solid #011733;
+  box-shadow: 0px 0px 5px #011733;
+  border-radius: 5px;
   width: 48%;
-  background-color: #2f81ed2a;
-  border-radius: 25px;
+  background-color: #01173309;
   height: 88.5vh;
   overflow: hidden;
 }
@@ -187,9 +199,9 @@
   padding: 5px;
   display: flex;
   justify-content: space-between;
-  border: 2px solid #011733;
-  background-color: rgb(246, 248, 252);
-  margin-top: 2px;
+  box-shadow: 0px 0px 15px #01173309;
+  background-color: #fff;
+  margin: 5px;
 }
 #picture_block {
   width: 100px;
