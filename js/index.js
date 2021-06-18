@@ -130,7 +130,7 @@ var fillTheDOM = (contactObjectItem) => {
   pBio.setAttribute("id", "contact_bio");
   var pClose = document.createElement("div");
   pClose.setAttribute("id", "removeItem");
-  pClose.innerHTML = '<img src="img/user-slash-solid.svg" />';
+  pClose.innerHTML = '<img src="img/delete.png" />';
 
   //Inserting elements each other
   list_item.appendChild(cred);
